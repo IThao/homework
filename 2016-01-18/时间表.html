@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    *{margin: 0; padding: 0;}
+    #box{width: 300px; height: 300px; border: 1px #000 solid; margin:100px auto; position: relative; top: 0;left: 0;border-radius: 50%;}
+    .div1{width:6px; height:100px; background:#000; position:absolute; top:50px; left:50%; margin-left:-3px; -webkit-transform-origin:center bottom;}
+    .div2{width:4px; height:120px; background:#000; position:absolute; top:30px; left:50%; margin-left:-2px; -webkit-transform-origin:center bottom;}
+    .div3{width:2px; height:140px; background:#000; position:absolute; top:10px; left:50%; margin-left:-1px; -webkit-transform-origin:center bottom;}
+    .on{width:4px; height:8px; background:#000; position:absolute; top:0; left:50%; margin-left:-2px; -webkit-transform-origin: center 150px;}
+    .div_on{width:6px; height:15px; background:#000; position:absolute; top:0; left:50%; margin-left:-3px; -webkit-transform-origin: center 150px;}
+    #box em{position:absolute; top:15px; font-style:normal; width:30px; left:50%; margin-left:-15px; text-align:center;}
+
+</style>
+<script type="text/javascript">
+    window.onload=function () {
+        var oBox=document.getElementById('box');
+        var oDiv1=document.querySelector('.div1');
+        var oDiv2=document.querySelector('.div2');
+        var oDiv3=document.querySelector('.div3');
+            //画刻度
+        for(var i=0;i<60;i++){
+            var oSpan = document.createElement('span');
+            if(i%5==0){
+                oSpan.className='div_on';
+                var oEm = document.createElement('em');
+                if(i==0){
+                    oEm.innerHTML = 12;
+                }else{
+                    oEm.innerHTML = i/5;
+                }
+                oSpan.appendChild(oEm);
+                oEm.style.WebkitTransform='rotate('+-i*6+'deg)';
+                
+            }else{
+                oSpan.className='on';
+            }
+            oBox.appendChild(oSpan);
+            
+            oSpan.style.WebkitTransform = 'rotate('+i*6+'deg)';
+        }
+        function tick(){
+            var oDate= new Date;
+            oDiv1.style.WebkitTransform='rotate('+(oDate.getHours()+oDate.getMinutes()/60)*30+'deg)';
+            oDiv2.style.WebkitTransform='rotate('+(oDate.getMinutes()+oDate.getSeconds()/60)*6+'deg)';
+            oDiv3.style.WebkitTransform='rotate('+oDate.getSeconds()*6+'deg)';
+        };
+
+        tick();
+        setInterval(tick,1000)
+    };
+</script>
+<body>
+    <div id="box">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+</body>
+</html>
