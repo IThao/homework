@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+*{margin:0; padding:0; list-style:none;}
+body{background:#000;}
+ul{width:133px; height:200px; margin:150px auto; position:relative; top:0; left:0;  -webkit-transition:3s all ease;-webkit-transform-style:preserve-3d; -webkit-transform:perspective(800px) rotateY(0) rotateX(-20deg);}
+li{width:133px; height:200px; position:absolute; top:0; left:0; -webkit-transition:1s all ease;}
+
+li.em1 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/1.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em2 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/2.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em3 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/3.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em4 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/4.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em5 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/5.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em6 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/6.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em7 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/7.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em8 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/8.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em9 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/9.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em10 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/10.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+
+li.em11 em{position:absolute; top:210px; left:0; width:100%; height:100%; background:url(img/11.jpg) no-repeat; background-size:100%; -webkit-transform:scale(1,-1); -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,1)); opacity:0.3;}
+ul:hover{-webkit-transform:perspective(800px) rotateY(180deg) rotateX(-20deg);}
+</style>
+<script>
+window.onload=function(){
+	var oUl = document.getElementsByTagName('ul')[0];
+	var aLi = oUl.children;
+	var i = aLi.length-1;
+	var timer = setInterval(function(){
+		aLi[i].style.WebkitTransform='rotateY('+i*360/aLi.length+'deg) translateZ(350px)';
+		i--;
+		if(i<0){
+			clearInterval(timer);
+		}
+	},350);
+};
+</script>
+</head>
+
+<body>
+<ul>
+	<li class="em1"><img src="img/1.jpg" /><em></em></li>
+	<li class="em2"><img src="img/2.jpg" /><em></em></li>
+	<li class="em3"><img src="img/3.jpg" /><em></em></li>
+	<li class="em4"><img src="img/4.jpg" /><em></em></li>
+	<li class="em5"><img src="img/5.jpg" /><em></em></li>
+	<li class="em6"><img src="img/6.jpg" /><em></em></li>
+	<li class="em7"><img src="img/7.jpg" /><em></em></li>
+	<li class="em8"><img src="img/8.jpg" /><em></em></li>
+	<li class="em9"><img src="img/9.jpg" /><em></em></li>
+	<li class="em10"><img src="img/10.jpg" /><em></em></li>
+	<li class="em11"><img src="img/11.jpg" /><em></em></li>
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

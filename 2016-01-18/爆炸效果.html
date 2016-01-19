@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+body{background:#333;}
+.btn_wrap{width:700px;height:100px;margin:0 auto;}
+.btn_wrap input{width:100px;height:50px; background:#333; color:#fff; margin-right:30px; background:#C03;font-size:24px;}
+ul{width:480px;height:260px;margin:100px auto;position:relative;top:0;left:0;}
+ul li{width:480px;height:260px; position:absolute; top:0; left:0;opacity:0;transition:1s all ease;-webkit-transform:perspective(1200px) rotateY(0deg) translateX(0px);}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        var oBlast=document.querySelectorAll('input')[0];
+        var oRever=document.querySelectorAll('input')[1];
+        var oRePag=document.querySelectorAll('input')[2];
+        var oTwist=document.querySelectorAll('input')[3];
+        var oCube=document.querySelectorAll('input')[4];
+        var iNow=0;
+        var aLi=document.querySelectorAll('li');
+        for(var i=0;i<aLi.length;i++){
+            iNow.style='';
+        }
+        aLi[iNow].style.opacity=1;
+        oBlast.onclick=function(){
+            iNOw++;
+            var rows=12;    
+            var col=13;
+            for(var i=0;i<rows;i++){
+                for(var j=0;j<col.length;j++){
+                    var oS=document.createElement('span');
+                    oS.style.background='';
+                }
+            }
+        };
+    },false);
+</script>
+</head>
+
+<body>
+    <ul>
+        <li><img src="img/1.jpg" /></li>
+        <li><img src="img/2.jpg" /></li>
+        <li><img src="img/3.jpg" /></li>
+        <li><img src="img/4.jpg" /></li>
+        <li><img src="img/5.jpg" /></li>
+        <li><img src="img/6.jpg" /></li>
+        <li><img src="img/7.jpg" /></li>
+        <li><img src="img/8.jpg" /></li>
+        <li><img src="img/9.jpg" /></li>
+        <li><img src="img/10.jpg" /></li>
+        <li><img src="img/11.jpg" /></li>
+        <li><img src="img/12.jpg" /></li>
+    </ul>
+    <div class="btn_wrap">
+        <input type="button" value="爆炸" />
+        <input type="button" value="翻转" />
+        <input type="button" value="翻页" />
+        <input type="button" value="扭曲" />
+        <input type="button" value="立方体" />
+    </div>
+</body>
+</html>
